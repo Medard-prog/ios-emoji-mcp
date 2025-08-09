@@ -14,7 +14,7 @@ const path = require("path");
 // Load emoji data
 let emojiData = {};
 try {
-  const dataPath = path.join(__dirname, "ut-urls.json");
+  const dataPath = path.join(__dirname, "emojis.json");
   emojiData = JSON.parse(fs.readFileSync(dataPath, "utf8"));
 } catch (error) {
   console.error("Error loading emoji data:", error);
