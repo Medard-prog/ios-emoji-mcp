@@ -167,9 +167,23 @@ URL: https://cgi78hjdnd.ufs.sh/f/DJLnTzoE7sxZfDL7m68uRskvbxZ7Pm6WuCnrOjaoStGEylc
 4. Add tests if applicable
 5. Submit a pull request
 
+## ⚖️ Legal & Copyright
+
+**Important:** This MCP server provides access to iOS emoji images that are the intellectual property of Apple Inc.
+
+- **Emoji Copyright:** All emoji images are © Apple Inc. and are subject to Apple's terms of use
+- **Apple Trademarks:** iOS and iPhone are trademarks of Apple Inc., registered in the U.S. and other countries
+- **Usage Rights:** This tool provides access to emoji URLs for educational, research, and development purposes
+- **Commercial Use:** For commercial applications, please ensure compliance with Apple's licensing terms
+- **No Affiliation:** This project is not affiliated with, endorsed by, or sponsored by Apple Inc.
+
+**Disclaimer:** The authors of this MCP server do not claim ownership of the emoji images or related intellectual property. Users are responsible for ensuring their use complies with applicable copyright laws and Apple's terms of service.
+
 ## 📄 License
 
-MIT License - feel free to use in your projects!
+MIT License - applies to the MCP server code only, not the emoji content.
+
+**Note:** The MIT license covers this MCP server's code and functionality. The emoji images themselves remain under Apple's copyright and are subject to their respective terms of use.
 
 ## 🐛 Issues
 
@@ -178,3 +192,5 @@ Found a bug or have a feature request? Please open an issue on [GitHub](https://
 ---
 
 *Made with ❤️ for the MCP community*
+
+**Apple Legal Notice:** Apple, iOS, iPhone, and related emoji designs are trademarks and/or copyrights of Apple Inc. This project is an independent tool and is not affiliated with Apple Inc.
