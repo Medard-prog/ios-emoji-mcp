@@ -1,6 +1,11 @@
 # 📱 iOS Emoji MCP Server
 
+[![npm version](https://badge.fury.io/js/ios-emoji-mcp.svg)](https://www.npmjs.com/package/ios-emoji-mcp)
+[![npm downloads](https://img.shields.io/npm/dm/ios-emoji-mcp.svg)](https://www.npmjs.com/package/ios-emoji-mcp)
+
 A Model Context Protocol (MCP) server that provides access to iOS emoji images with URLs for both 160x160px and 320x320px versions.
+
+📦 **npm:** https://www.npmjs.com/package/ios-emoji-mcp
 
 ## 🚀 Quick Start with npx
 
