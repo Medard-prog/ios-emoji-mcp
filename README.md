@@ -89,12 +89,14 @@ Add to your Claude Desktop config (`claude_desktop_config.json`):
 ### 1. `get_emojis`
 Lists all available iOS emoji names.
 
+⚠️ **Note:** Full list contains 1,559 emojis (~5,550 tokens)
+
 **Parameters:** None
 
 **Example:**
 ```
-Available iOS emojis (5 total):
-100, 1234, 8ball, a, ab
+Available iOS emojis (1559 total):
+100, 1234, 8ball, a, ab, abc, abcd, accept...
 ```
 
 ### 2. `search_emojis`
