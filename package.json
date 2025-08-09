@@ -1,0 +1,29 @@
+{
+  "name": "ios-emoji-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for iOS emoji functionality",
+  "main": "index.js",
+  "bin": {
+    "ios-emoji-mcp": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Medard-prog/ios-emoji-mcp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Medard-prog/ios-emoji-mcp/issues"
+  },
+  "homepage": "https://github.com/Medard-prog/ios-emoji-mcp#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.2",
+    "zod": "^3.25.76"
+  }
+}
