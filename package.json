@@ -14,9 +14,9 @@
     "type": "git",
     "url": "git+https://github.com/Medard-prog/ios-emoji-mcp.git"
   },
-  "keywords": [],
+  "keywords": ["mcp", "emoji", "ios", "model-context-protocol"],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "type": "commonjs",
   "bugs": {
     "url": "https://github.com/Medard-prog/ios-emoji-mcp/issues"
