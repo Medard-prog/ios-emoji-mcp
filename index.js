@@ -11,12 +11,33 @@ const {
 const fs = require("fs");
 const path = require("path");
 
+// Debug logging
+function debugLog(message, data = '') {
+  const timestamp = new Date().toISOString();
+  const logMessage = `[${timestamp}] ${message} ${data}\n`;
+  console.error(logMessage.trim());
+  try {
+    fs.appendFileSync(path.join(__dirname, 'mcp-debug.log'), logMessage);
+  } catch (e) {
+    // Ignore logging errors
+  }
+}
+
 // Load emoji data
 let emojiData = {};
 try {
+  debugLog("Loading emoji data...");
   const dataPath = path.join(__dirname, "emojis.json");
+  debugLog("Data path:", dataPath);
+  
+  if (!fs.existsSync(dataPath)) {
+    throw new Error(`Emoji data file not found: ${dataPath}`);
+  }
+  
   emojiData = JSON.parse(fs.readFileSync(dataPath, "utf8"));
+  debugLog("Emoji data loaded successfully", `${Object.keys(emojiData).length} emojis`);
 } catch (error) {
+  debugLog("Error loading emoji data:", error.message);
   console.error("Error loading emoji data:", error);
   process.exit(1);
 }
@@ -82,6 +103,7 @@ const server = new Server(
 );
 
 server.setRequestHandler(ListToolsRequestSchema, async () => {
+  debugLog("ListTools request received");
   return {
     tools: [
       {
@@ -136,6 +158,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
 });
 
 server.setRequestHandler(CallToolRequestSchema, async (request) => {
+  debugLog("CallTool request received", JSON.stringify(request.params));
   const { name, arguments: args } = request.params;
   
   switch (name) {
@@ -230,12 +253,29 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 });
 
 async function runServer() {
-  const transport = new StdioServerTransport();
-  await server.connect(transport);
-  console.error("iOS Emoji MCP Server running on stdio");
+  try {
+    debugLog("Starting iOS Emoji MCP Server...");
+    debugLog("Node version:", process.version);
+    debugLog("Working directory:", process.cwd());
+    debugLog("Script path:", __filename);
+    
+    const transport = new StdioServerTransport();
+    debugLog("StdioServerTransport created");
+    
+    await server.connect(transport);
+    debugLog("Server connected successfully");
+    console.error("iOS Emoji MCP Server running on stdio");
+  } catch (error) {
+    debugLog("Failed to start server:", error.message);
+    debugLog("Error stack:", error.stack);
+    console.error("Failed to start server:", error);
+    process.exit(1);
+  }
 }
 
-runServer().catch((error) => {
-  console.error("Server error:", error);
-  process.exit(1);
-});
+if (require.main === module) {
+  runServer().catch((error) => {
+    console.error("Server error:", error);
+    process.exit(1);
+  });
+}
