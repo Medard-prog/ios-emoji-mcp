@@ -1,3 +1,5 @@
+[![MSeeP.ai Security Assessment Badge](https://mseep.net/pr/medard-prog-ios-emoji-mcp-badge.png)](https://mseep.ai/app/medard-prog-ios-emoji-mcp)
+
 # 📱 iOS Emoji MCP Server
 
 [![npm version](https://badge.fury.io/js/ios-emoji-mcp.svg)](https://www.npmjs.com/package/ios-emoji-mcp)
